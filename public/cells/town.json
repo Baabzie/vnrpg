@@ -1,0 +1,6 @@
+{
+  "name": "town",
+  "npcs": [],
+  "connections": ["inn", "store"],
+  "inside": false
+}

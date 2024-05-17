@@ -1,0 +1,57 @@
+.game-screen {
+  display: flex;
+  width: 1280px;
+  height: 729px;
+  margin: auto;
+  position: relative;
+  top: 3rem;
+  .background-img-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+
+.locations-buttons-div {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  height: 100%;
+  gap: 1rem;
+}
+
+.journal-button-div {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  height: 100%;
+  gap: 1rem;
+}
+
+.npcs-buttons-div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  padding: 1rem;
+  width: 100%;
+}

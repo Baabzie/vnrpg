@@ -1,0 +1,10 @@
+{
+  "id": "getApples",
+  "name": "Get some apples",
+  "stages": {
+    "00": "",
+    "10": "I should go to the store and get some apples for the innkeeper.",
+    "20": "I have the apples, I should return to the innkeeper with them.",
+    "100": "The innkeeper was very happy with the apples."
+  }
+}

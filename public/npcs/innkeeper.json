@@ -1,0 +1,482 @@
+[
+  {
+    "nodes": [
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "7031206",
+            "text": { "ENG": "Yes I want to know something else." }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": null,
+            "text": { "ENG": "No. Goodbye" }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "3061429",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": { "ENG": "Could I help you with anything else?" },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "7031206",
+        "node_name": "6581799",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": { "ENG": "Hello there! I'm glad you are back!" },
+        "title": "Show Message"
+      },
+      {
+        "branches": { "False": "192004", "True": "6581799" },
+        "node_name": "6852668",
+        "node_type": "condition_branch",
+        "text": "isDispositionAbove(innkeeper,70)",
+        "title": "Condition Branch"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "7031206",
+        "node_name": "1750050",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": { "ENG": "Oh, my \"favorite customer\"..." },
+        "title": "Show Message"
+      },
+      {
+        "next": "9829550",
+        "node_name": "START",
+        "node_type": "start",
+        "title": ""
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "7031206",
+        "node_name": "6955770",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": { "ENG": "Welcome back!" },
+        "title": "Show Message"
+      },
+      {
+        "branches": { "False": "6955770", "True": "1750050" },
+        "node_name": "192004",
+        "node_type": "condition_branch",
+        "text": "isDispositionBelow(innkeeper,30)",
+        "title": "Condition Branch"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "3061429",
+        "node_name": "8587609",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": { "ENG": "No, not that I'm aware of.." },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "4856252",
+            "text": { "ENG": "[Pay 10 silver] I'll take it" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "3061429",
+            "text": { "ENG": "I'll think about it." }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "2343053",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Well of course! For 10 silver the room is yours for the night."
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "8587609",
+            "text": { "ENG": "So is there another place to stay in town?" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "3061429",
+            "text": { "ENG": "Okay.." }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "8949723",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "I'm afraid all of our beds are full for the evening..probably best if you check somewhere else."
+        },
+        "title": "Show Message"
+      },
+      {
+        "next": "3061429",
+        "node_name": "4856252",
+        "node_type": "execute",
+        "text": "removeSilver(10)",
+        "title": "Execute"
+      },
+      {
+        "branches": { "False": "2343053", "True": "8949723" },
+        "node_name": "8401432",
+        "node_type": "condition_branch",
+        "text": "isDispositionBelow(innkeeper,30)",
+        "title": "Condition Branch"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "3061429",
+        "node_name": "2043005",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "There isn't much to tell. My father used to run this place and he's father before that. It isn't much but I'm happy as long as I'm getting enough paying customers to keep this place running."
+        },
+        "title": "Show Message"
+      },
+      {
+        "branches": { "False": "2043005", "True": "5511180" },
+        "node_name": "330662",
+        "node_type": "condition_branch",
+        "text": "isDispositionBelow(innkeeper,30)",
+        "title": "Condition Branch"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "3061429",
+        "node_name": "5511180",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "A really bad place apparently. As you said yourself.."
+        },
+        "title": "Show Message"
+      },
+      {
+        "next": "7031206",
+        "node_name": "9405120",
+        "node_type": "execute",
+        "text": "makePlayerKnown(innkeeper)",
+        "title": "Execute"
+      },
+      {
+        "next": "6213406",
+        "node_name": "8324286",
+        "node_type": "execute",
+        "text": "removeDisposition(innkeeper,30)",
+        "title": "Execute"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "9405120",
+        "node_name": "8543112",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Well that's very nice of you to say! Manners like yours are a rare sight these days."
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "9405120",
+        "node_name": "6213406",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "I do my best you know.. Manners really are a rare sight these days.... A pity."
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "7031206",
+        "node_name": "2228187",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "No not right now. And thank you for the help earlier!"
+        },
+        "title": "Show Message"
+      },
+      {
+        "branches": { "False": "6125726", "True": "5494817" },
+        "node_name": "1479116",
+        "node_type": "condition_branch",
+        "text": "isQuestStarted(getApples)",
+        "title": "Condition Branch"
+      },
+      {
+        "branches": { "False": "3992705", "True": "2228187" },
+        "node_name": "5494817",
+        "node_type": "condition_branch",
+        "text": "isQuestStage(getApples, 100)",
+        "title": "Condition Branch"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "4800659",
+            "text": { "ENG": "Okay!" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "7031206",
+            "text": { "ENG": "Not right now.." }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "6125726",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "There actually is a thing you could do for me. Run over to the store and pick up some apples for me. Don't worry, I have already paid for them."
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "7031206",
+        "node_name": "3992705",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Bring me the apples from the store like I told you."
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "330662",
+            "text": { "ENG": "Can you tell me more about this inn?" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "8401432",
+            "text": { "ENG": "Do you have a bed that I can rent?" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "1479116",
+            "text": { "ENG": "Do you need help with something?" }
+          },
+          {
+            "condition": "isQuestStage(getApples, 20)",
+            "is_condition": true,
+            "next": "5059036",
+            "text": { "ENG": "I have those apples for you!" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": null,
+            "text": { "ENG": "Goodbye" }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "7031206",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": false,
+        "speaker_type": 0,
+        "text": { "ENG": "How can I help you?" },
+        "title": "Show Message"
+      },
+      {
+        "next": "1854736",
+        "node_name": "4800659",
+        "node_type": "execute",
+        "text": "changeQuestStage(getApples, 10)",
+        "title": "Execute"
+      },
+      {
+        "next": "9578338",
+        "node_name": "5059036",
+        "node_type": "execute",
+        "text": "changeQuestStage(getApples, 100)",
+        "title": "Execute"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": null,
+            "text": { "ENG": "Goodbye!" }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "1854736",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Thank you! I'll have something for you when you get back!"
+        },
+        "title": "Show Message"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "choices": [
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "9405120",
+            "text": { "ENG": "Hi!" }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "186631",
+            "text": {
+              "ENG": "It's a real nice place you got here. I wouldn't call it \"simple\"."
+            }
+          },
+          {
+            "condition": "",
+            "is_condition": false,
+            "next": "8324286",
+            "text": {
+              "ENG": "\"Simple\" is kind of an understatement. This place is a really bad you know?"
+            }
+          }
+        ],
+        "file": "",
+        "is_box": false,
+        "node_name": "4840857",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Hello! I think we never meet before. Welcome! I'm the owner of this simple inn."
+        },
+        "title": "Show Message"
+      },
+      {
+        "next": "8543112",
+        "node_name": "186631",
+        "node_type": "execute",
+        "text": "addDisposition(innkeeper,30)",
+        "title": "Execute"
+      },
+      {
+        "next": "7031206",
+        "node_name": "6826435",
+        "node_type": "execute",
+        "text": "addDisposition(innkeeper,30)",
+        "title": "Execute"
+      },
+      {
+        "character": ["Innkeeper", 1],
+        "file": "",
+        "is_box": false,
+        "next": "6826435",
+        "node_name": "9578338",
+        "node_type": "show_message",
+        "object_path": "",
+        "slide_camera": true,
+        "speaker_type": 0,
+        "text": {
+          "ENG": "Thank you so much! Here is some money for your trouble."
+        },
+        "title": "Show Message"
+      },
+      {
+        "branches": { "False": "4840857", "True": "6852668" },
+        "node_name": "9829550",
+        "node_type": "condition_branch",
+        "text": "isPlayerKnown(innkeeper)",
+        "title": "Condition Branch"
+      }
+    ],
+    "variables": {}
+  }
+]

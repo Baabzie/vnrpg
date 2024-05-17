@@ -1,0 +1,39 @@
+.dialogue-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+.dialogue-overlay h1 {
+  color: white;
+  padding: 0.3rem;
+}
+.dialogue-overlay p {
+  color: white;
+  font-size: larger;
+  padding: 0.3rem;
+}
+
+.dialogue-choices-div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.choice-btn {
+  all: unset;
+  background: none;
+  padding: 0.3rem;
+  width: 100%;
+}
+.choice-btn p {
+  color: white;
+  font-size: larger;
+}
+
+.choice-btn:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=DialogueTree.module.css.map */
